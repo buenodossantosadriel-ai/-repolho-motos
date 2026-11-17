@@ -92,6 +92,21 @@ body.modal-open{overflow:hidden}
 .cta-inner small{color:#a3292e}
 @media(max-width:700px){.gallery-feature{height:225px}.gallery-thumbs{gap:7px}.gallery-thumb{width:56px;height:45px}.mission-grid{grid-template-columns:1fr;gap:10px}.photo-modal{padding:12px}.photo-modal-inner{grid-template-columns:38px minmax(0,1fr) 38px;gap:5px}.modal-control{width:36px;height:36px;font-size:1.3rem}.modal-close{top:-48px}.about-mascot{max-height:205px}}
 
+
+/* Ajustes solicitados: logo no destaque e identificação inferior sem cortes */
+.hero-art{padding:12px 0 48px;min-height:455px}
+.hero-photo{width:100%;height:390px;object-fit:contain;padding:24px;mask-image:none;-webkit-mask-image:none;border-radius:22px;filter:drop-shadow(0 18px 28px #000a)}
+.art-tag{right:0;bottom:0}
+.about-art{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;min-height:390px;padding:24px;overflow:visible}
+.about-mascot{display:block;width:min(100%,420px);height:270px;max-height:none;object-fit:contain;object-position:center;flex:0 1 auto}
+.stamp{position:relative;right:auto;bottom:auto;align-self:center;margin:0;flex:0 0 auto;white-space:nowrap}
+@media(max-width:700px){
+  .hero-art{min-height:310px;padding:8px 0 42px}
+  .hero-photo{height:270px;padding:16px}
+  .about-art{min-height:300px;padding:18px;gap:10px}
+  .about-mascot{height:205px}
+}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MotorcycleRepair","name":"Repolho Motos","telephone":"+55 54 99175-7900","address":{"@type":"PostalAddress","streetAddress":"Rua Miguel Vargas, 43, Bairro Boqueirão","addressLocality":"Passo Fundo","addressRegion":"RS","addressCountry":"BR"},"sameAs":["https://www.instagram.com/repolhomotosoficina/"]}
@@ -111,7 +126,7 @@ body.modal-open{overflow:hidden}
 <p class="lead">Da revisão à parte elétrica, da troca de óleo à escolha da sua próxima moto: conte com a Repolho Motos em Passo Fundo.</p>
 <div class="actions"><a class="btn primary" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20na%20Repolho%20Motos." target="_blank" rel="noopener">Chamar no WhatsApp ↗</a><a class="btn outline" href="#servicos">Conhecer serviços ↓</a></div>
 <div class="meta"><span><i class="dot"></i> Atendimento em Passo Fundo-RS</span><span>📍 Bairro Boqueirão</span></div>
-</div><div class="hero-art" aria-label="Motocicleta em imagem ilustrativa"><div class="orbit"></div><img class="hero-photo" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=85" alt="Motocicleta em fotografia ilustrativa" fetchpriority="high"><div class="art-tag"><small>Repolho Motos</small><strong>Paixão por motos</strong><span>Cuidado em cada detalhe.</span></div></div></div></section>
+</div><div class="hero-art" aria-label="Logo oficial da Repolho Motos"><div class="orbit"></div><img class="hero-photo" src="https://i.ibb.co/zWfF73Nn/Screenshot-20261117-103004-1.jpg" alt="Logo oficial da Repolho Motos com seu personagem" fetchpriority="high"><div class="art-tag"><small>Repolho Motos</small><strong>Paixão por motos</strong><span>Cuidado em cada detalhe.</span></div></div></div></section>
 <section class="section services" id="servicos"><div class="wrap"><div class="section-head"><div><div class="eyebrow">O que fazemos</div><h2>Cuidado completo para <span>sua moto.</span></h2></div><p>Serviços essenciais para manter sua moto pronta para a rotina e para a estrada. Chame a equipe e consulte seu atendimento.</p></div>
 <div class="service-grid">
 <article class="service-card"><div class="service-icon">⚙</div><h3>Revisão</h3><p>Cuidados e verificações para ajudar a manter sua moto em boas condições.</p></article>
@@ -160,7 +175,7 @@ body.modal-open{overflow:hidden}
 <article class="mission-card"><div class="mission-icon">⚡</div><h3>Direto ao problema</h3><p>Atendimento para elétrica e manutenção, com conversa clara sobre o serviço.</p></article>
 <article class="mission-card"><div class="mission-icon">🏍</div><h3>Paixão por duas rodas</h3><p>Oficina e revenda no mesmo lugar, para quem vive a rotina sobre uma moto.</p></article>
 </div></div></section>
-<section class="section about" id="sobre"><div class="wrap about-grid"><div class="about-art"><img class="about-mascot" src="https://i.ibb.co/zWfF73Nn/Screenshot-20261117-103004-1.jpg" alt="Personagem e identidade visual da Repolho Motos"><span class="stamp">Passo Fundo • RS</span></div><div class="about-copy"><div class="eyebrow">Sobre a Repolho Motos</div><h2>Mais cuidado. Mais confiança. <span>Mais estrada.</span></h2><p>A Repolho Motos reúne serviços de oficina e revenda para quem vive sobre duas rodas. Estamos no Bairro Boqueirão, em Passo Fundo, prontos para conversar sobre o que sua moto precisa.</p><ul class="checks"><li>Revisão e manutenção</li><li>Serviços de elétrica</li><li>Troca de óleo</li><li>Consulta de motos para revenda</li></ul><a class="btn primary" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20Repolho%20Motos." target="_blank" rel="noopener">Converse com a gente ↗</a></div></div></section>
+<section class="section about" id="sobre"><div class="wrap about-grid"><div class="about-art"><img class="about-mascot" src="https://i.ibb.co/zWfF73Nn/Screenshot-20261117-103004-1.jpg" alt="Logo da Repolho Motos"><span class="stamp">Passo Fundo • RS</span></div><div class="about-copy"><div class="eyebrow">Sobre a Repolho Motos</div><h2>Mais cuidado. Mais confiança. <span>Mais estrada.</span></h2><p>A Repolho Motos reúne serviços de oficina e revenda para quem vive sobre duas rodas. Estamos no Bairro Boqueirão, em Passo Fundo, prontos para conversar sobre o que sua moto precisa.</p><ul class="checks"><li>Revisão e manutenção</li><li>Serviços de elétrica</li><li>Troca de óleo</li><li>Consulta de motos para revenda</li></ul><a class="btn primary" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20Repolho%20Motos." target="_blank" rel="noopener">Converse com a gente ↗</a></div></div></section>
 <section class="section" id="contato"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Estamos por aqui</div><h2>Venha falar com a <span>gente.</span></h2></div><p>Entre em contato para tirar dúvidas, consultar serviços ou saber sobre motos disponíveis.</p></div>
 <div class="contact-grid"><div class="contact-panel"><h3>Visite a oficina</h3>
 <div class="contact-item"><span class="symbol">⌖</span><div><small>Endereço</small><strong>Rua Miguel Vargas, 43<br>Bairro Boqueirão, Passo Fundo-RS</strong></div></div>
