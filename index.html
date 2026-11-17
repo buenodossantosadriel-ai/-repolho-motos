@@ -32,6 +32,66 @@ footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 @media(max-width:700px){.wrap{width:calc(100% - 30px)}.nav{min-height:68px}.menu{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:16px 20px 20px;flex-direction:column;align-items:stretch;gap:0;background:#0d120e;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-links>a:not(.btn){padding:12px 3px;border-bottom:1px solid var(--line)}.nav-links .btn{margin-top:12px}.hero{padding:50px 0 42px}.hero-grid{grid-template-columns:1fr;gap:0}h1{font-size:clamp(3.4rem,16vw,5rem)}.lead{font-size:.91rem}.hero-art{min-height:300px;margin-top:5px}.orbit{width:min(82vw,340px)}.hero-photo{height:285px}.art-tag{right:2px;bottom:0}.section{padding:61px 0}.section-head{display:block;margin-bottom:25px}.section-head p{margin-top:12px}.service-grid{gap:10px}.service-card{min-height:190px;padding:18px 15px}.service-card h3{font-size:1.3rem}.catalog{grid-template-columns:1fr;gap:14px}.bike-photo{height:225px}.bike-body p{min-height:0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:18px}.about-art{min-height:245px}.about-art:before{font-size:10rem}.contact-panel{padding:21px}.map,.map iframe{min-height:310px}.cta-box{padding:33px 23px}.cta-box:after{font-size:12rem;right:-4px;bottom:-50px}.footer-inner{flex-direction:column;align-items:flex-start}}
 @media(max-width:390px){.service-grid{grid-template-columns:1fr}.actions .btn{width:100%}.meta{gap:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* Identidade marciana e vitrine com galerias */
+:root{--green:#a8ff2e;--yellow:#ffd43b;--red:#ff3e45;--bg:#070908;--panel:#101511;--panel2:#171f18}
+.topline{background:linear-gradient(90deg,var(--red) 0%,var(--yellow) 48%,var(--green) 100%);color:#090d09}
+.brand-mark{border-color:#ff3e4580;box-shadow:0 0 0 3px #ffd43b18,0 0 25px #a8ff2e30}
+.hero{background:radial-gradient(ellipse at 5% 70%,#ff3e4512,transparent 24rem),radial-gradient(ellipse at 90% 0%,#ffd43b12,transparent 22rem)}
+.hero-art:before{content:"✦";position:absolute;z-index:2;top:5%;left:7%;color:var(--yellow);font-size:2rem;text-shadow:0 0 18px var(--yellow)}
+.hero-art:after{content:"";position:absolute;right:7%;top:14%;width:13px;height:13px;border:3px solid var(--red);transform:rotate(45deg);box-shadow:0 0 18px var(--red)}
+.art-tag{border-color:#ff3e4560;box-shadow:0 0 0 3px #ffd43b12,0 18px 45px #0009}
+.art-tag small{color:var(--yellow)}
+.section-head h2 span,.about-copy h2 span{ text-shadow:0 0 24px #a8ff2e22}
+.service-card{border-top:2px solid #a8ff2e65}
+.service-card:nth-child(2){border-top-color:#ff3e45}
+.service-card:nth-child(3){border-top-color:#ffd43b}
+.service-card:nth-child(4){border-top-color:#a8ff2e}
+.bike{border-color:#ffffff18;box-shadow:0 16px 40px #0003;transition:transform .25s,border-color .25s,box-shadow .25s}
+.bike:hover{transform:translateY(-6px);border-color:#a8ff2e88;box-shadow:0 20px 48px #0006,0 0 25px #a8ff2e12}
+.bike-photo{height:auto;min-height:0;position:relative;overflow:hidden;background:#f1f0e9}
+.bike-photo:after{display:none}
+.gallery-feature{display:block;width:100%;height:245px;padding:0;border:0;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 50%,#fff,#e9e8df);cursor:zoom-in}
+.gallery-feature img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .35s}
+.gallery-feature:hover img{transform:scale(1.035)}
+.gallery-feature:after{content:"Ampliar foto +";position:absolute;right:12px;bottom:12px;padding:6px 10px;border-radius:99px;background:#090d0de8;color:var(--green);font-size:.62rem;font-weight:900;letter-spacing:.06em}
+.bike-photo .tag{bottom:auto;top:13px;left:13px;z-index:2;background:var(--red);color:white}
+.year-pill{position:absolute;right:13px;top:13px;z-index:2;padding:6px 10px;border-radius:99px;background:var(--yellow);color:#15170e;font-size:.65rem;font-weight:900}
+.gallery-thumbs{display:flex;gap:8px;padding:10px 13px;background:#0c110d;border-top:1px solid #ffffff12}
+.gallery-thumb{width:62px;height:48px;padding:2px;border:1px solid #ffffff28;border-radius:9px;background:#f1f0e9;overflow:hidden;cursor:pointer;opacity:.68;transition:.2s}
+.gallery-thumb img{width:100%;height:100%;object-fit:contain}
+.gallery-thumb:hover,.gallery-thumb.active{opacity:1;border:2px solid var(--green);box-shadow:0 0 12px #a8ff2e35}
+.bike-body{padding:19px 20px 21px}
+.bike-body h3{font-size:1.75rem}
+.bike-specs{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px}
+.bike-specs span{padding:6px 9px;border:1px solid #ffffff18;border-radius:99px;background:#ffffff08;color:#dce5dc;font-size:.64rem;font-weight:800}
+.bike-body .btn{border-color:#a8ff2e70}
+.gallery-note{display:flex;align-items:flex-start;gap:10px;margin-top:20px;padding:14px 16px;border-left:3px solid var(--yellow);border-radius:0 12px 12px 0;background:#ffd43b0c;color:#b6c0b7;font-size:.72rem}
+.garage-lab{position:relative;overflow:hidden;background:linear-gradient(135deg,#111711 0%,#080b09 65%,#241011 100%);border-block:1px solid #ffffff12}
+.garage-lab:after{content:"";position:absolute;right:-95px;top:-100px;width:290px;height:290px;border:1px solid #ff3e4538;border-radius:50%;box-shadow:0 0 0 28px #ff3e4508,0 0 0 58px #a8ff2e08}
+.mission-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.mission-card{padding:23px;border:1px solid #ffffff18;border-radius:18px;background:#ffffff08}
+.mission-card .mission-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#a8ff2e18;color:var(--green);font-size:1.25rem}
+.mission-card:nth-child(2) .mission-icon{background:#ff3e4518;color:var(--red)}
+.mission-card:nth-child(3) .mission-icon{background:#ffd43b18;color:var(--yellow)}
+.mission-card h3{margin:15px 0 6px;font:800 1.35rem 'Barlow Condensed';text-transform:uppercase}
+.mission-card p{margin:0;color:var(--muted);font-size:.79rem;line-height:1.7}
+.about-art{background:radial-gradient(circle at 50% 45%,#a8ff2e24,transparent 48%),linear-gradient(135deg,#1a241b,#0d120e)}
+.about-art:before{display:none}
+.about-mascot{position:relative;z-index:1;width:min(88%,390px);max-height:270px;object-fit:contain;filter:drop-shadow(0 12px 24px #0009)}
+.photo-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:22px;background:#030504f2;backdrop-filter:blur(12px)}
+.photo-modal.open{display:flex}
+.photo-modal-inner{position:relative;width:min(100%,980px);display:grid;grid-template-columns:56px minmax(0,1fr) 56px;align-items:center;gap:12px}
+.photo-modal figure{margin:0;min-width:0}
+.photo-modal figure img{display:block;width:100%;max-height:78vh;object-fit:contain;border-radius:14px;background:#f1f0e9}
+.photo-modal figcaption{padding:12px 6px 0;text-align:center;color:#e8eee8;font-size:.82rem}
+.modal-control{width:48px;height:48px;border:1px solid #ffffff38;border-radius:50%;background:#111713;color:var(--green);font-size:1.7rem;cursor:pointer}
+.modal-close{position:absolute;right:0;top:-58px;width:42px;height:42px;border:1px solid #ffffff38;border-radius:50%;background:#111713;color:white;font-size:1.5rem;cursor:pointer}
+body.modal-open{overflow:hidden}
+.cta-box{background:linear-gradient(115deg,var(--green),#e0ff9e 55%,var(--yellow))}
+.cta-inner small{color:#a3292e}
+@media(max-width:700px){.gallery-feature{height:225px}.gallery-thumbs{gap:7px}.gallery-thumb{width:56px;height:45px}.mission-grid{grid-template-columns:1fr;gap:10px}.photo-modal{padding:12px}.photo-modal-inner{grid-template-columns:38px minmax(0,1fr) 38px;gap:5px}.modal-control{width:36px;height:36px;font-size:1.3rem}.modal-close{top:-48px}.about-mascot{max-height:205px}}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MotorcycleRepair","name":"Repolho Motos","telephone":"+55 54 99175-7900","address":{"@type":"PostalAddress","streetAddress":"Rua Miguel Vargas, 43, Bairro Boqueirão","addressLocality":"Passo Fundo","addressRegion":"RS","addressCountry":"BR"},"sameAs":["https://www.instagram.com/repolhomotosoficina/"]}
@@ -42,7 +102,7 @@ footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <header><div class="wrap nav">
 <a class="brand" href="#inicio" aria-label="Repolho Motos - início"><span class="brand-mark"><img src="https://i.ibb.co/zWfF73Nn/Screenshot-20261117-103004-1.jpg" alt="Logo da Repolho Motos" fetchpriority="high"></span><span class="brand-copy"><strong>REPOLHO MOTOS</strong><small>OFICINA &amp; REVENDA</small></span></a>
 <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
-<nav class="nav-links" id="links" aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#motos">Motos</a><a href="#sobre">A oficina</a><a href="#contato">Contato</a><a class="btn primary" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Repolho%20Motos." target="_blank" rel="noopener">WhatsApp ↗</a></nav>
+<nav class="nav-links" id="links" aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#motos">Motos</a><a href="#missao">Nossa missão</a><a href="#sobre">A oficina</a><a href="#contato">Contato</a><a class="btn primary" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Repolho%20Motos." target="_blank" rel="noopener">WhatsApp ↗</a></nav>
 </div></header>
 <main>
 <section class="hero" id="inicio"><div class="wrap hero-grid"><div>
@@ -59,14 +119,48 @@ footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <article class="service-card"><div class="service-icon">◉</div><h3>Troca de óleo</h3><p>Manutenção periódica com orientação sobre o óleo adequado para sua moto.</p></article>
 <article class="service-card"><div class="service-icon">🏍</div><h3>Revenda de motos</h3><p>Está procurando sua próxima moto? Consulte as opções disponíveis.</p></article>
 </div></div></section>
-<section class="section" id="motos"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Vitrine demonstrativa</div><h2>Modelos que todo mundo <span>conhece.</span></h2></div><p>Veja alguns modelos de referência. Quer saber o que temos disponível? Consulte diretamente pelo WhatsApp.</p></div>
+<section class="section" id="motos"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">Vitrine demonstrativa • modelos reais</div><h2>Clássicas da rua. <span>Ícones da garagem.</span></h2></div><p>Galerias com fotos de referência dos modelos e anos selecionados. Toque nas miniaturas para trocar a imagem ou na foto principal para ampliar.</p></div>
 <div class="catalog">
-<article class="bike"><div class="bike-photo"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80" alt="Motocicleta em imagem ilustrativa da Honda CG Titan 125" loading="lazy"><span class="tag">Imagem ilustrativa</span></div><div class="bike-body"><h3>Honda CG Titan 125</h3><p>Um clássico das ruas. Consulte condições e disponibilidade.</p><a class="btn outline" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20Honda%20CG%20Titan%20125." target="_blank" rel="noopener">Consultar pelo WhatsApp ↗</a></div></article>
-<article class="bike"><div class="bike-photo"><img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80" alt="Motocicleta em imagem ilustrativa da Honda Biz" loading="lazy"><span class="tag">Imagem ilustrativa</span></div><div class="bike-body"><h3>Honda Biz</h3><p>Praticidade para o dia a dia. Consulte condições e disponibilidade.</p><a class="btn outline" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20Honda%20Biz." target="_blank" rel="noopener">Consultar pelo WhatsApp ↗</a></div></article>
-<article class="bike"><div class="bike-photo"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=80" alt="Motocicleta em imagem ilustrativa da Honda CG Fan 125" loading="lazy"><span class="tag">Imagem ilustrativa</span></div><div class="bike-body"><h3>Honda CG Fan 125</h3><p>Uma opção tradicional para a rotina. Consulte condições e disponibilidade.</p><a class="btn outline" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20Honda%20CG%20Fan%20125." target="_blank" rel="noopener">Consultar pelo WhatsApp ↗</a></div></article>
-</div><p class="note">As motos e fotografias desta vitrine são apenas referências ilustrativas. Não representam estoque, ano, versão ou disponibilidade atual. Consulte a Repolho Motos antes de se deslocar.</p>
+<article class="bike">
+<div class="bike-photo"><button class="gallery-feature" type="button" aria-label="Ampliar galeria Honda CG 125 Titan 2004"><img src="https://4.bp.blogspot.com/-pP_PQL3MzA8/UGTZuJ2_YyI/AAAAAAAAFew/16Y4-ICVSn4/s1600/Honda%2BCG%2B125%2BTitan5.jpg" alt="Honda CG 125 Titan 2004 vermelha, vista lateral"></button><span class="tag">Clássica</span><span class="year-pill">2004</span></div>
+<div class="gallery-thumbs">
+<button class="gallery-thumb active" type="button" data-src="https://4.bp.blogspot.com/-pP_PQL3MzA8/UGTZuJ2_YyI/AAAAAAAAFew/16Y4-ICVSn4/s1600/Honda%2BCG%2B125%2BTitan5.jpg" data-caption="Honda CG 125 Titan 2004 — vista lateral, vermelha"><img src="https://4.bp.blogspot.com/-pP_PQL3MzA8/UGTZuJ2_YyI/AAAAAAAAFew/16Y4-ICVSn4/s1600/Honda%2BCG%2B125%2BTitan5.jpg" alt="Miniatura Titan 2004 lateral"></button>
+<button class="gallery-thumb" type="button" data-src="https://www.depierimotos.com.br/fotos/site_motos/1427/galeria_FOTOS_MOTO/0/0002.jpg" data-caption="Honda CG 125 Titan ES 2004 — foto de referência em vermelho"><img src="https://www.depierimotos.com.br/fotos/site_motos/1427/galeria_FOTOS_MOTO/0/0002.jpg" alt="Miniatura Titan ES 2004 vermelha"></button>
+<button class="gallery-thumb" type="button" data-src="https://img.olx.com.br/images/73/735643261689763.jpg" data-caption="Honda CG 125 Titan KS 2004 — referência da versão prata"><img src="https://img.olx.com.br/images/73/735643261689763.jpg" alt="Miniatura Titan KS 2004 prata"></button>
+</div>
+<div class="bike-body"><h3>Honda CG 125 Titan</h3><p>Uma das grandes clássicas da Honda, com visual tradicional, motor monocilíndrico e manutenção conhecida.</p><div class="bike-specs"><span>2004</span><span>124 cc</span><span>5 marchas</span><span>KS / KSE / ES</span></div><a class="btn outline" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20Honda%20CG%20125%20Titan%202004." target="_blank" rel="noopener">Consultar este modelo ↗</a></div>
+</article>
+<article class="bike">
+<div class="bike-photo"><button class="gallery-feature" type="button" aria-label="Ampliar galeria Honda CG 125 Fan 2014"><img src="https://img.indianautosblog.com/2013/08/2014-Honda-CG-124-Fan-Brazil.jpg" alt="Honda CG 125 Fan 2014 vermelha, vista lateral"></button><span class="tag">Urbana</span><span class="year-pill">2014</span></div>
+<div class="gallery-thumbs">
+<button class="gallery-thumb active" type="button" data-src="https://img.indianautosblog.com/2013/08/2014-Honda-CG-124-Fan-Brazil.jpg" data-caption="Honda CG 125 Fan 2014 — foto de apresentação do modelo"><img src="https://img.indianautosblog.com/2013/08/2014-Honda-CG-124-Fan-Brazil.jpg" alt="Miniatura Fan 125 2014 vermelha"></button>
+<button class="gallery-thumb" type="button" data-src="https://cdn.carrosp.com.br/img/23/800x800/honda-cg-125-fan-es-7715012-75090212.jpg" data-caption="Honda CG 125 Fan ES 2014 — referência em preto"><img src="https://cdn.carrosp.com.br/img/23/800x800/honda-cg-125-fan-es-7715012-75090212.jpg" alt="Miniatura Fan ES 2014 preta"></button>
+<button class="gallery-thumb" type="button" data-src="https://imgserver.autocarro.com.br/fotos/grande/1932381_honda-cg-125-fan-esd-2014-vermelha_3adda1.jpg" data-caption="Honda CG 125 Fan ESD 2014 — referência em vermelho"><img src="https://imgserver.autocarro.com.br/fotos/grande/1932381_honda-cg-125-fan-esd-2014-vermelha_3adda1.jpg" alt="Miniatura Fan ESD 2014 vermelha"></button>
+</div>
+<div class="bike-body"><h3>Honda CG 125 Fan</h3><p>Uma street de perfil econômico e prático, feita para encarar a rotina e os trajetos urbanos.</p><div class="bike-specs"><span>2014</span><span>125 cc</span><span>Street</span><span>KS / ES / ESD</span></div><a class="btn outline" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20Honda%20CG%20125%20Fan%202014." target="_blank" rel="noopener">Consultar este modelo ↗</a></div>
+</article>
+<article class="bike">
+<div class="bike-photo"><button class="gallery-feature" type="button" aria-label="Ampliar galeria Honda Biz 125 2025"><img src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-ex-azul-lateral.webp" alt="Honda Biz 125 EX 2025 azul, vista lateral"></button><span class="tag">Versátil</span><span class="year-pill">2025</span></div>
+<div class="gallery-thumbs">
+<button class="gallery-thumb active" type="button" data-src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-ex-azul-lateral.webp" data-caption="Honda Biz 125 EX 2025 — azul"><img src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-ex-azul-lateral.webp" alt="Miniatura Biz EX azul"></button>
+<button class="gallery-thumb" type="button" data-src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-ex-vermelha.webp" data-caption="Honda Biz 125 EX 2025 — vermelha"><img src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-ex-vermelha.webp" alt="Miniatura Biz EX vermelha"></button>
+<button class="gallery-thumb" type="button" data-src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-es-vermelha.webp" data-caption="Honda Biz 125 ES 2025 — vermelha"><img src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-es-vermelha.webp" alt="Miniatura Biz ES vermelha"></button>
+<button class="gallery-thumb" type="button" data-src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-es-preta.webp" data-caption="Honda Biz 125 ES 2025 — preta"><img src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-es-preta.webp" alt="Miniatura Biz ES preta"></button>
+<button class="gallery-thumb" type="button" data-src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-ex-branca.webp" data-caption="Honda Biz 125 EX 2025 — branca"><img src="https://www.honda.com.br/motos/sites/hda/files/2024-08/honda-biz-ex-branca.webp" alt="Miniatura Biz EX branca"></button>
+</div>
+<div class="bike-body"><h3>Honda Biz 125</h3><p>A geração 2025 chegou com motor 125 cc e duas versões: ES e EX. Fotos oficiais mostram cores e acabamentos diferentes.</p><div class="bike-specs"><span>2025</span><span>125 cc</span><span>ES / EX</span><span>USB-C</span></div><a class="btn outline" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20Honda%20Biz%20125%202025." target="_blank" rel="noopener">Consultar este modelo ↗</a></div>
+</article>
+</div>
+<div class="gallery-note"><strong>ℹ</strong><span>Vitrine demonstrativa: as fotos são referências dos modelos e anos indicados, não representam motos em estoque. Nas galerias de Titan e Fan, podem aparecer versões KS, KSE, ES ou ESD. Consulte a Repolho Motos para confirmar versão, cor e disponibilidade.</span></div>
 </div></section>
-<section class="section about" id="sobre"><div class="wrap about-grid"><div class="about-art" role="img" aria-label="Identidade visual Repolho Motos"><span class="stamp">Passo Fundo • RS</span></div><div class="about-copy"><div class="eyebrow">Sobre a Repolho Motos</div><h2>Mais cuidado. Mais confiança. <span>Mais estrada.</span></h2><p>A Repolho Motos reúne serviços de oficina e revenda para quem vive sobre duas rodas. Estamos no Bairro Boqueirão, em Passo Fundo, prontos para conversar sobre o que sua moto precisa.</p><ul class="checks"><li>Revisão e manutenção</li><li>Serviços de elétrica</li><li>Troca de óleo</li><li>Consulta de motos para revenda</li></ul><a class="btn primary" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20Repolho%20Motos." target="_blank" rel="noopener">Converse com a gente ↗</a></div></div></section>
+<section class="section garage-lab" id="missao"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Nosso jeito de trabalhar</div><h2>Uma oficina com <span>atitude marciana.</span></h2></div><p>Visual forte, conversa direta e atenção ao que realmente importa: sua moto e sua tranquilidade na estrada.</p></div>
+<div class="mission-grid">
+<article class="mission-card"><div class="mission-icon">⚙</div><h3>Olho nos detalhes</h3><p>Revisão e manutenção com atenção aos pontos importantes da sua motocicleta.</p></article>
+<article class="mission-card"><div class="mission-icon">⚡</div><h3>Direto ao problema</h3><p>Atendimento para elétrica e manutenção, com conversa clara sobre o serviço.</p></article>
+<article class="mission-card"><div class="mission-icon">🏍</div><h3>Paixão por duas rodas</h3><p>Oficina e revenda no mesmo lugar, para quem vive a rotina sobre uma moto.</p></article>
+</div></div></section>
+<section class="section about" id="sobre"><div class="wrap about-grid"><div class="about-art"><img class="about-mascot" src="https://i.ibb.co/zWfF73Nn/Screenshot-20261117-103004-1.jpg" alt="Personagem e identidade visual da Repolho Motos"><span class="stamp">Passo Fundo • RS</span></div><div class="about-copy"><div class="eyebrow">Sobre a Repolho Motos</div><h2>Mais cuidado. Mais confiança. <span>Mais estrada.</span></h2><p>A Repolho Motos reúne serviços de oficina e revenda para quem vive sobre duas rodas. Estamos no Bairro Boqueirão, em Passo Fundo, prontos para conversar sobre o que sua moto precisa.</p><ul class="checks"><li>Revisão e manutenção</li><li>Serviços de elétrica</li><li>Troca de óleo</li><li>Consulta de motos para revenda</li></ul><a class="btn primary" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20Repolho%20Motos." target="_blank" rel="noopener">Converse com a gente ↗</a></div></div></section>
 <section class="section" id="contato"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Estamos por aqui</div><h2>Venha falar com a <span>gente.</span></h2></div><p>Entre em contato para tirar dúvidas, consultar serviços ou saber sobre motos disponíveis.</p></div>
 <div class="contact-grid"><div class="contact-panel"><h3>Visite a oficina</h3>
 <div class="contact-item"><span class="symbol">⌖</span><div><small>Endereço</small><strong>Rua Miguel Vargas, 43<br>Bairro Boqueirão, Passo Fundo-RS</strong></div></div>
@@ -77,11 +171,76 @@ footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section class="cta"><div class="wrap"><div class="cta-box"><div class="cta-inner"><small>Precisa de uma mão com sua moto?</small><h2>Chama a Repolho Motos!</h2><p>Fale diretamente pelo WhatsApp e consulte o melhor atendimento para você.</p><a class="btn dark-btn" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Repolho%20Motos." target="_blank" rel="noopener">Falar pelo WhatsApp ↗</a></div></div></div></section>
 </main>
 <footer><div class="wrap footer-inner"><div>© <span id="year"></span> Repolho Motos. Todos os direitos reservados.</div><div class="footer-links"><a href="https://www.instagram.com/repolhomotosoficina/" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/5554991757900" target="_blank" rel="noopener">WhatsApp</a><a href="#inicio">Voltar ao topo ↑</a></div></div></footer>
+
+<div class="photo-modal" id="photoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galeria de fotos da motocicleta">
+  <div class="photo-modal-inner">
+    <button class="modal-control" id="photoPrev" type="button" aria-label="Foto anterior">‹</button>
+    <figure><img id="photoModalImage" src="" alt=""><figcaption id="photoModalCaption"></figcaption></figure>
+    <button class="modal-control" id="photoNext" type="button" aria-label="Próxima foto">›</button>
+    <button class="modal-close" id="photoClose" type="button" aria-label="Fechar galeria">×</button>
+  </div>
+</div>
+
 <a class="float-wa" href="https://wa.me/5554991757900?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Repolho%20Motos." target="_blank" rel="noopener" aria-label="Conversar com a Repolho Motos pelo WhatsApp">☏</a>
 <script>
 const menu=document.getElementById('menu'),links=document.getElementById('links');
 menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');menu.textContent=open?'×':'☰'});
 links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
 document.getElementById('year').textContent=new Date().getFullYear();
+
+const photoModal=document.getElementById('photoModal');
+const photoModalImage=document.getElementById('photoModalImage');
+const photoModalCaption=document.getElementById('photoModalCaption');
+const photoPrev=document.getElementById('photoPrev');
+const photoNext=document.getElementById('photoNext');
+const photoClose=document.getElementById('photoClose');
+let activePhotos=[],activePhotoIndex=0;
+function renderPhoto(index){
+  if(!activePhotos.length)return;
+  activePhotoIndex=(index+activePhotos.length)%activePhotos.length;
+  const item=activePhotos[activePhotoIndex];
+  photoModalImage.src=item.dataset.src;
+  photoModalImage.alt=item.dataset.caption||'Foto da motocicleta';
+  photoModalCaption.textContent=item.dataset.caption||'';
+}
+function closePhotoModal(){
+  photoModal.classList.remove('open');
+  photoModal.setAttribute('aria-hidden','true');
+  document.body.classList.remove('modal-open');
+}
+document.querySelectorAll('.bike').forEach(card=>{
+  const gallery=card.querySelector('.gallery-thumbs');
+  const thumbs=Array.from(gallery.querySelectorAll('.gallery-thumb'));
+  const feature=card.querySelector('.gallery-feature');
+  const mainImage=feature.querySelector('img');
+  const setActive=index=>{
+    const item=thumbs[index];
+    mainImage.src=item.dataset.src;
+    mainImage.alt=item.dataset.caption||'Foto da motocicleta';
+    thumbs.forEach((thumb,i)=>{
+      thumb.classList.toggle('active',i===index);
+      thumb.setAttribute('aria-pressed',String(i===index));
+    });
+    gallery.dataset.active=String(index);
+  };
+  thumbs.forEach((thumb,index)=>thumb.addEventListener('click',()=>setActive(index)));
+  feature.addEventListener('click',()=>{
+    activePhotos=thumbs;
+    renderPhoto(Number(gallery.dataset.active||0));
+    photoModal.classList.add('open');
+    photoModal.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');
+  });
+});
+photoPrev.addEventListener('click',()=>renderPhoto(activePhotoIndex-1));
+photoNext.addEventListener('click',()=>renderPhoto(activePhotoIndex+1));
+photoClose.addEventListener('click',closePhotoModal);
+photoModal.addEventListener('click',event=>{if(event.target===photoModal)closePhotoModal()});
+document.addEventListener('keydown',event=>{
+  if(!photoModal.classList.contains('open'))return;
+  if(event.key==='Escape')closePhotoModal();
+  if(event.key==='ArrowLeft')renderPhoto(activePhotoIndex-1);
+  if(event.key==='ArrowRight')renderPhoto(activePhotoIndex+1);
+});
 </script>
 </body></html>
